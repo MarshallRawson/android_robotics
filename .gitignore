@@ -1,0 +1,3 @@
+*.o
+./Rust/rust-android-example/rust/target/*
+./Rust/rust-android-example/rust_x/target/*

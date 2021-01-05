@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+test -z $ANDROID_ROBOTICS_REPO_DIR && echo "ANDROID_ROBOTICS_REPO_DIR not set!" && exit 1
+set -euo pipefail
+adb push $ANDROID_ROBOTICS_REPO_DIR/bash/hello_world.bash /data/local/tmp/hello_world.bash
