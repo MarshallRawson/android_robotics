@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cargo build --target armv7-linux-androideabi
