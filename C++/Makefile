@@ -10,12 +10,12 @@ ifndef install_dir
 endif
 
 push: build dir_on_device
-	adb push ./hello_world_cpp.o "$(install_dir)"
+	adb push ./hello_world.o "$(install_dir)"
 
 dir_on_device:
 	adb shell mkdir -p $(install_dir)
 
-build: hello_world_cpp.o
+build: hello_world.o
 
-hello_world_cpp.o: hello_world.cpp
-	$(G++) -o hello_world_cpp.o hello_world.cpp
+hello_world.o: hello_world.cpp
+	$(G++) -o hello_world.o hello_world.cpp
