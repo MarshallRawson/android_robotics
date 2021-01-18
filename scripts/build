@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-source $(realpath $(dirname $BASH_SOURCE))/setup.bash
-make build -C $ANDROID_ROBOTICS_REPO_DIR
-$(realpath $(dirname $BASH_SOURCE))/unsetup.bash
