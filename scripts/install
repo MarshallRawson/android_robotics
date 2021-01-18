@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# installing android NDK (standalone)
+
+REPO_ROOT=$(realpath $(dirname $BASH_SOURCE)/../)
+
+echo "source $REPO_ROOT/scripts/setup.bash" >> ~/.bashrc
+
+read -p "Download the Andorid NDK zip from https://developer.android.com/ndk/downloads for linux (press Enter when finished)."
+
+read -p "move it to $REPO_ROOT/NDK (press Enter when finished)"
+
+if [ -f $REPO_ROOT/NDK/android-ndk-r*.zip ]; then
+  echo " Good job! NDK zip detected"
+else
+  echo "no zip detected in '$REPO_ROOT/NDK'!"
+  exit 1
+fi
+
+test -d $REPO_ROOT/NDK/android-ndk && rm -rf $REPO_ROOT/NDK/android-ndk && echo "Cleaned out old NDKs"
+
+mkdir -p $REPO_ROOT/NDK/android-ndk
+
+unzip $REPO_ROOT/NDK/android-ndk*.zip -d $REPO_ROOT/NDK/
+
+mv $REPO_ROOT/NDK/android-ndk-r*/* $REPO_ROOT/NDK/android-ndk
+
+find $REPO_ROOT/NDK -type d -name "android-ndk-r*" -delete
+
+# android tools
+sudo apt install android-tools-adb android-tools-fastboot
+
+# image building tool
+sudo apt-get install debootstrap

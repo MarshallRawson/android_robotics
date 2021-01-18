@@ -1,3 +1,5 @@
 *.o
-./Rust/rust-android-example/rust/target/*
-./Rust/rust-android-example/rust_x/target/*
+NDK/*
+NDK/android-ndk
+*.swp
+sdcard*
