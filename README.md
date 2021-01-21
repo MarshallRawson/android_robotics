@@ -104,9 +104,13 @@ see if there is an sdcard id there, mine was `/storage/C47E-B2F6`
 * test to make sure the ubuntu image works
 
 `adb shell`
+
 `su`
+
 `cd /storage/C47E-B2F6`
+
 `cd ubuntu`
+
 `sh enter_chroot`
 
 * you should now be in a bash session that looks like this
@@ -118,7 +122,7 @@ Setting environment vars
 spaceswan@localhost:~$ 
 ```
 * exit the ubuntu session
-* 
+
 `exit`
 
 * exit the adb shell
@@ -137,7 +141,7 @@ spaceswan@localhost:~$
 
 * use adb to find the device's ip address
 
-'adb shell ip a'
+`adb shell ip a`
 
 * note the wlan0 inet address
 
@@ -146,7 +150,7 @@ spaceswan@localhost:~$
 `ssh spaceswan@<wlan0 inet address>`
 
 validated on:
-Motorola G6 (codename: ali)
 
+* Motorola G6 (codename: ali)
 
 Please make a pull request if you find any errors with this documentation / scripting infrastructure :)
