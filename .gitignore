@@ -3,3 +3,5 @@ NDK/*
 NDK/android-ndk
 *.swp
 sdcard*
+mount*
+
