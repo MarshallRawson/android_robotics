@@ -31,5 +31,7 @@ find $REPO_ROOT/NDK -type d -name "android-ndk-r*" -delete
 # android tools
 sudo apt install android-tools-adb android-tools-fastboot
 
+sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
+
 # image building tool
 sudo apt-get install debootstrap
