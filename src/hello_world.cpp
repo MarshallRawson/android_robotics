@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-//#include <camera/NdkCameraManager.h>
+#include <camera/NdkCameraManager.h>
 
 int main()
 {
