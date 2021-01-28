@@ -8,4 +8,9 @@ while [ ! -d $PREFIX ]; do
 done
 
 su -c "CMD='sudo /etc/init.d/ssh start' sh $PREFIX/enter_chroot"
+
+if [ -f "/data/swapfile" ]; then
+  su -c "swapon /data/swapfile"
+fi
+
 termux-wake-unlock

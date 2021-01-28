@@ -149,7 +149,17 @@ spaceswan@localhost:~$
 
 `ssh spaceswan@<wlan0 inet address>`
 
-validated on:
+### Recommended
+
+#### Allocate More Swap space
+
+Often android devices do not have enough memory to compile large catkin projects locally and the device will hard crash.
+
+To remedy this, I have added a script to allocate additional swap space under `/data/swapfile`
+
+To allocate N GiB of extra swap, run `SWAP_SIZE=N ./scripts/allocate_extra_swap`
+
+This repo has been validated on:
 
 * Motorola G6 (codename: ali)
 
